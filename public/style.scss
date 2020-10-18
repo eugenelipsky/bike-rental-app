@@ -1,0 +1,189 @@
+@mixin base__button {
+  padding: 0 37px;
+  height: 55px;
+  background-color: #23ba99;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  min-width: 170px;
+}
+
+*, html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+#app {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4a4a4a;
+  margin: 95px auto;
+  max-width: 1300px;
+  padding: 0 15px;
+}
+
+.rent__form-section {
+  margin-top: 68px;
+}
+
+.form__wrapper {
+  padding: 56px 40px 40px;
+  background-color: #e9eaed;
+  border: 1px solid #d8d9da;
+  border-radius: 5px;
+}
+
+.rent__form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input__field {
+  display: inline-block;
+  position: relative;
+
+  label {
+    position: absolute;
+    top: -22px;
+    font-size: 14px;
+  }
+
+  .rent__price-input {
+    height: 55px;
+    min-width: 180px;
+    border: 1px solid #d8d9dc;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 0 15px;
+  }
+
+  .bike__name-input, .bike__type-select {
+    height: 55px;
+    min-width: 380px;
+    border: 1px solid #d8d9dc;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 0 15px;
+    color: #4a4a4a;
+  }
+}
+
+
+.rented__bikes {
+  margin-top: 80px;
+}
+
+.rent__form-btn {
+  @include base__button;
+  background-color: #23ba99;
+}
+
+.card__wrapper {
+  padding: 26px 40px;
+  background-color: #fff;
+  border: 1px solid #d8d9da;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+
+  span {
+    font-size: 20px;
+  }
+}
+
+.card__main-info {
+  margin-top: 8px;
+}
+
+.cancel__rent-btn {
+  @include base__button;
+  background-color: #f3323f;
+}
+
+.available__bikes {
+  margin-top: 65px;
+}
+
+.rent__bike-btn {
+  @include base__button;
+  background-color: #3750c7;
+  margin-right: 25px;
+}
+
+.delete__bike-btn {
+  @include base__button;
+  background-color: #f3323f;
+}
+
+@media (max-width: 1300px) {
+  .rent__form {
+    flex-wrap: wrap;
+  }
+
+  .input__field {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .rent__form {
+    flex-direction: column;
+  }
+
+  .input__field {
+    margin-top: 20px;
+  }
+
+  .rent__form-btn {
+    max-width: 170px;
+  }
+
+  .input__field {
+    .bike__name-input, .input__field .bike__type-select {
+      min-width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 808px) {
+  .card__buttons {
+    display: flex;
+  }
+}
+
+@media (max-width: 770px) {
+  .card__wrapper {
+    flex-direction: column;
+  }
+
+  .card__main {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 515px) {
+  .input__field {
+    .bike__name-input, .bike__type-select {
+      min-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .card__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rent__bike-btn {
+    margin: 0 0 10px;
+  }
+}
