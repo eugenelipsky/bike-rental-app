@@ -25,18 +25,6 @@ module.exports.remove = async (req, res) => {
   }
 }
 
-module.exports.update = async (req, res) => {
-  const $set = {
-    lastRentTime: req.body.lastRentTime,
-  }
-  try {
-    const bike = await Bike.findOneAndUpdate({_id: req.body.id}, {$set}, {new: true})
-    res.json(bike)
-  } catch (e) {
-    res.status(500).json(e)
-  }
-}
-
 module.exports.startRent = async (req, res) => {
   const $set = {
     rented: true,

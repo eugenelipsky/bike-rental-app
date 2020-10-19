@@ -27,14 +27,6 @@ export default new Vuex.Store({
       }
     },
 
-    async updateBike({}, payload) {
-      try {
-        return await axiosInstance.put('/', payload)
-      } catch (e) {
-        console.log(e)
-      }
-    },
-
     async startRent({}, payload) {
       try {
         await axiosInstance.post('/start-rent', payload)
